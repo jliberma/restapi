@@ -12,6 +12,8 @@ commands
   $ echo test > message.bin
   $ curl -H "Content-type: application/json" -X POST http://127.0.0.1:5000/messages -d '{"message":"Hello Data"}'
   $ curl -H "Content-type: application/octet-stream" -X POST http://127.0.0.1:5000/messages --data-binary @message.bin
+  $ curl -i http://127.0.0.1:5000/users/2
+  $ curl -i http://127.0.0.1:5000/users/4
 ~~~~
 
 option		purpose
