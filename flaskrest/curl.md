@@ -14,6 +14,8 @@ commands
   $ curl -H "Content-type: application/octet-stream" -X POST http://127.0.0.1:5000/messages --data-binary @message.bin
   $ curl -i http://127.0.0.1:5000/users/2
   $ curl -i http://127.0.0.1:5000/users/4
+  $ curl -v -u "admin:secret" http://127.0.0.1:5000/hello
+  $ curl http://127.0.0.1:5000/hello
 ~~~~
 
 option		purpose
