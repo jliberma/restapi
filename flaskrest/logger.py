@@ -2,19 +2,19 @@ from flask import Flask, url_for
 from flask import request
 from flask import json
 from flask import Response
+import logging
 
 
 app = Flask(__name__)
 
 
-import logging
 file_handler = logging.FileHandler('app.log')
 app.logger.addHandler(file_handler)
 app.logger.setLevel(logging.INFO)
-#app.run(debug=True)
+# app.run(debug=True)
 
 
-@app.route('/hello', methods = ['GET'])
+@app.route('/hello', methods=['GET'])
 def api_hello():
     app.logger.info('informing you that im processing a request')
     app.logger.warning('warning you that im processing a request')

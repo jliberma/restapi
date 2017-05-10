@@ -16,12 +16,12 @@ def not_found(error=None):
     return resp
 
 
-@app.route('/users/<userid>', methods = ['GET'])
+@app.route('/users/<userid>', methods=['GET'])
 def api_users(userid):
-    users = {'1':'john', '2':'steve', '3':'bill'}
+    users = {'1': 'john', '2': 'steve', '3': 'bill'}
 
     if userid in users:
-        return jsonify({userid:users[userid]})
+        return jsonify({userid: users[userid]})
     else:
         return not_found()
 
