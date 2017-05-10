@@ -9,4 +9,16 @@
 * [FlaskRESTful](https://flask-restful.readthedocs.io/en/0.3.5/) documentation
 * [Designing a RESTful API using Flask-RESTful](https://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful)
 * Miguel Grinberg's [Complete REST Tutorial](https://github.com/miguelgrinberg/REST-tutorial) on Github
+* [Designing a RESTful Web API](http://blog.luisrei.com/articles/rest.html) -- good high level resource (no pun intended)
+
+
+*Implement RESTful API with Python and Flask*
+Example code: [https://github.com/lrei/articles/tree/master/2012-05-02-flaskrest](https://github.com/lrei/articles/tree/master/2012-05-02-flaskrest)
+
+~~~~
+$ source activate py36
+$ python -V
+Python 3.6.1 :: Continuum Analytics, Inc.
+$ conda install --name py36 flask
+~~~~
 
