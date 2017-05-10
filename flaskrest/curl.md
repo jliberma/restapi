@@ -1,3 +1,6 @@
+from: [Implementing a RESTful API with Python & Flask](http://blog.luisrei.com/articles/flaskrest.html)
+
+
 commands
 ~~~~
   $ curl http://127.0.0.1:5000/
