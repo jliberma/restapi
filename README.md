@@ -22,3 +22,16 @@ Python 3.6.1 :: Continuum Analytics, Inc.
 $ conda install --name py36 flask
 ~~~~
 
+*Six Design Rules for a REST system*
+1. client-server
+2. stateless
+3. server indicates if requests are cacheable
+4. layered system -- intermediaries can respond instead of server without client interaction
+5. uniform interface
+6. optional -- servers can provide scripts or executables for clients to run in their context
+
+REST was originally designed to fit the HTTP protocol.
+
+In REST, resources are represented and URIs.
+
+Designing a REST service or API is an exercise in identifying the resources that will be exposed and how they will by affected by the different request methods.
