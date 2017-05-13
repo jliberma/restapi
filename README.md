@@ -32,6 +32,6 @@ $ conda install --name py36 flask
 
 REST was originally designed to fit the HTTP protocol.
 
-In REST, resources are represented and URIs.
+In REST resources are represented as URIs.
 
-Designing a REST service or API is an exercise in identifying the resources that will be exposed and how they will by affected by the different request methods.
+Designing a REST API is an exercise in identifying resources to expose and writing request methods to affect them.
