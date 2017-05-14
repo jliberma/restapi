@@ -1,3 +1,0 @@
-1. apply get_tasks technique to all other functions to ensure client
-   gets URIs instead of task IDs
-2. Securing a RESTful web service section
