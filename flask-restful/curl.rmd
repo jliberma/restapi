@@ -1,7 +1,31 @@
-https://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful
+*Resources*
+* https://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful
+* https://github.com/miguelgrinberg/REST-tutorial/blob/master/rest-server-v2.py
 
-https://github.com/miguelgrinberg/REST-tutorial/blob/master/rest-server-v2.py
 
+*curl commands*
 ~~~~
+# view all tasks
+curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks
+# view specific task
+curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks/2
+# create a new task
+curl -u miguel:python -i -H "Content-Type: application/json" -X POST -d '{"title":"Read a book"}' http://localhost:5000/todo/api/v1.0/tasks
+# view new task
+curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks/3
+# set task state done to True
+curl -u miguel:python -i -H "Content-Type: application/json" -X PUT -d '{"done":true}' http://localhost:5000/todo/api/v1.0/tasks/2
+# delete a task
+curl -u miguel:python -i  -X DELETE http://localhost:5000/todo/api/v1.0/tasks/3
+# view new task
+curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks/3
+# view all tasks
+curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks
+~~~~
+
+
+*Environment*
+~~~~
+pip install flask-restful
 ~~~~
 
