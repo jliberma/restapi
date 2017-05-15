@@ -4,12 +4,12 @@ from flask import Flask
 from flask import jsonify
 from flask import abort
 from flask import make_response
-from flask.ext.restful import Api
-from flask.ext.restful import Resource
-from flask.ext.restful import reqparse
-from flask.ext.restful import fields
-from flask.ext.restful import marshal
-from flask.ext.httpauth import HTTPBasicAuth
+from flask_restful import Api
+from flask_restful import Resource
+from flask_restful import reqparse
+from flask_restful import fields
+from flask_restful import marshal
+from flask_httpauth import HTTPBasicAuth
 
 
 app = Flask(__name__, static_url_path="")
