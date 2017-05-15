@@ -24,7 +24,7 @@ Test PyMongo
 file: [mdbtest.py](https://raw.githubusercontent.com/jliberma/restapi/master/restflaskmongo/mdbtest.py)
 ~~~~
 python mdbtest.py
-{'_id': ObjectId('5919c325523ace04aa0a5716'), 'name': 'Texas'}
+{'id': ObjectId('5919c325523ace04aa0a5716'), 'name': 'Texas'}
 ~~~~
 
 mongo shell
@@ -46,3 +46,20 @@ quit()
 ~~~~
 
 Querying MongoDB
+
+~~~~
+mongo
+show dbs;
+use test-database
+show collections
+db.posts.find()
+db.posts.find({"author":"Adja"})
+quit()
+~~~~
+
+combine mongodb and python flask
+~~~~
+pip install Flask-PyMongo
+
+
+~~~~
