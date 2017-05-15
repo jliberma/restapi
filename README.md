@@ -7,12 +7,16 @@ Background:
 * [OpenStack Python SDK](https://docs.openstack.org/user-guide/sdk.html)
 * [API Creation](https://www.fullstackpython.com/api-creation.html) on Full Stack Python
 * [FlaskRESTful](https://flask-restful.readthedocs.io/en/0.3.5/) documentation
+* [RESTful Web API with Python, Flask and MongoDB](https://www.slideshare.net/slideshow/embed_code/13539139)
 
 Tutorials:
 * [Django REST Framework Tutorial](http://www.django-rest-framework.org/tutorial/quickstart/)
 * [Implement RESTful API with Python and Flask](http://blog.luisrei.com/articles/flaskrest.html) -- [Example code](https://github.com/lrei/articles/tree/master/2012-05-02-flaskrest)
 * [Designing a RESTful API with Python and Flask](https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask) -- [Github repo](https://github.com/miguelgrinberg/REST-tutorial)
 * [Designing a RESTful API using Flask-RESTful](https://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful)
+* [REST API with Flask + MongoDB](http://www.bogotobogo.com/python/MongoDB_PyMongo/python_MongoDB_RESTAPI_with_Flask.php)
+* [Creating a REST Api using Flask-Restful and MongoDB](http://salmanwahed.github.io/2015/05/01/flask-restful-mongodb-api/)
+* [csvtojson Quick Start](https://www.npmjs.com/package/csvtojson#quick-start)
 
 Environment setup
 ~~~~
