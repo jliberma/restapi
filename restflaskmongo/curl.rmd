@@ -21,6 +21,7 @@ pgrep mongod
 NOTE: [mongodb production notes](https://docs.mongodb.com/manual/administration/production-notes/)
 
 Test PyMongo
+file: [mdbtest.py](https://raw.githubusercontent.com/jliberma/restapi/master/restflaskmongo/mdbtest.py)
 ~~~~
 python mdbtest.py
 {'_id': ObjectId('5919c325523ace04aa0a5716'), 'name': 'Canada'}
