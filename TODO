@@ -1,5 +1,6 @@
-1. Set up MongoDB
+x. Set up MongoDB
 2. Store csv records in MongoDB
 3. Write API to get, put, update records
 4. Add auth
 5. find a place to host
+6. explore MongoDB
