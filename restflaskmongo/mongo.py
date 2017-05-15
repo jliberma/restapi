@@ -16,7 +16,7 @@ mongo = PyMongo(app)
 
 
 @app.route('/star', methods=['GET'])
-def get_all_starts():
+def get_all_stars():
     star = mongo.db.stars
     output = []
     for s in star.find():
@@ -24,7 +24,7 @@ def get_all_starts():
     return jsonify({'result': output})
 
 
-@app.route('/star/', methods=['GET'])
+@app.route('/star/<path:name>', methods=['GET'])
 def get_one_star(name):
     star = mongo.db.stars
     s = star.find_one({'name': name})

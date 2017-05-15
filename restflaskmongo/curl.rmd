@@ -60,6 +60,8 @@ quit()
 combine mongodb and python flask
 ~~~~
 pip install Flask-PyMongo
-curl -i -H "Content-Type: application/json" -X POST -d '{"distance":"8.6","name":"Sirius"}' http://localhost:5000/star
 curl -i http://localhost:5000/star
+curl -i -H "Content-Type: application/json" -X POST -d " { \"name\" : \"test4\", \"distance\" : \"300\"} " http://localhost:5000/star
+curl -i http://localhost:5000/star
+curl -i http://localhost:5000/star/test4
 ~~~~
