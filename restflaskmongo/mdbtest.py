@@ -9,7 +9,7 @@ def get_db():
 
 
 def add_country(db):
-    db.countries.insert({"name": "Canada"})
+    db.countries.insert({"name": "Texas"})
 
 
 def get_country(db):
