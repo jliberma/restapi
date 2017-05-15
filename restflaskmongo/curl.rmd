@@ -1,2 +1,20 @@
 * [REST API with Flask + MongoDB](http://www.bogotobogo.com/python/MongoDB_PyMongo/python_MongoDB_RESTAPI_with_Flask.php)
 * [Creating a REST Api using Flask-Restful and MongoDB](http://salmanwahed.github.io/2015/05/01/flask-restful-mongodb-api/)
+
+
+Install MongoDB
+~~~~
+# install PyMongo
+   conda install pymongo=3.3.0 -n py36
+# install MongoDB
+   conda install mongodb=3.3.9 -n py36
+# start mongodb
+   sudo -i
+   mkdir -p /data/db
+   chown \<user\> /data/db
+   mongod --dbpath /data/db &
+   pgrep mongod
+~~~~
+
+NOTE: [mongodb production notes](https://docs.mongodb.com/manual/administration/production-notes/)
+
