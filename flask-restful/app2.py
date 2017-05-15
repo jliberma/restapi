@@ -60,7 +60,7 @@ class TaskListAPI(Resource):
         self.reqparse.add_argument('title', type=str, required=True,
                                    help='No task title provided',
                                    location='json')
-        self.reqparse.add_Argument('description', type=str, default="",
+        self.reqparse.add_argument('description', type=str, default="",
                                    location='json')
         super(TaskListAPI, self).__init__()
 
@@ -100,7 +100,7 @@ class TaskAPI(Resource):
         if len(task) == 0:
             abort(404)
         task = task[0]
-        args = self.reqparse.parse_Args()
+        args = self.reqparse.parse_args()
         for k, v in args.items():
             if v is not None:
                 task[k] = v

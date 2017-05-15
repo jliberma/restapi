@@ -15,11 +15,13 @@ curl -u miguel:python -i -H "Content-Type: application/json" -X POST -d '{"title
 curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks/3
 # set task state done to True
 curl -u miguel:python -i -H "Content-Type: application/json" -X PUT -d '{"done":true}' http://localhost:5000/todo/api/v1.0/tasks/2
+# view modified task
+curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks/2
 # delete a task
 curl -u miguel:python -i  -X DELETE http://localhost:5000/todo/api/v1.0/tasks/3
-# view new task
+# try to view deleted task
 curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks/3
-# view all tasks
+# view all remaining tasks
 curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks
 ~~~~
 
