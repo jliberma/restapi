@@ -17,6 +17,7 @@ Tutorials:
 * [REST API with Flask + MongoDB](http://www.bogotobogo.com/python/MongoDB_PyMongo/python_MongoDB_RESTAPI_with_Flask.php)
 * [Creating a REST Api using Flask-Restful and MongoDB](http://salmanwahed.github.io/2015/05/01/flask-restful-mongodb-api/)
 * [csvtojson Quick Start](https://www.npmjs.com/package/csvtojson#quick-start)
+* [csvkit](https://csvkit.readthedocs.io/en/1.0.2/index.html)
 
 Environment setup
 ~~~~
