@@ -75,12 +75,16 @@ class Star(Resource):
         stars.insert(star)
         return {'result': marshal(star, star_fields)}, 201
 
-    # add method for returning a single record
     def get(self, name):
         star = [star for star in mongo.db.stars.find() if star['name'] == name]
         return {'star': marshal(star[0], star_fields)}, 201
 
-    # add emthod for deleting a record
+    def delete(self, name):
+        stars = mongo.db.stars
+        star = [star for star in stars.find() if star['name'] == name]
+        stars.delete_many({ "name": name } )
+        return {'remove': marshal(star, star_fields)}, 201
+
 
 
 api = Api(app)
