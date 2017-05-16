@@ -4,7 +4,6 @@ from flask import Flask
 from flask import jsonify
 from flask import abort
 from flask import make_response
-from flask import request
 from flask_pymongo import PyMongo
 from flask_restful import Api
 from flask_restful import Resource
@@ -43,6 +42,20 @@ star_fields = {
    }
 
 
+class Stars(Resource):
+    decorators = [auth.login_required]
+
+    def __init__(self):
+        self.reqparse = reqparse.RequestParser()
+        self.reqparse.add_argument('name', type=str, location='json')
+        self.reqparse.add_argument('distance', type=int, location='json')
+        super(Stars, self).__init__()
+
+    def get(self):
+        stars = mongo.db.stars.find()
+        return {'stars': [marshal(star, star_fields) for star in stars]}
+
+
 class Star(Resource):
     decorators = [auth.login_required]
 
@@ -51,10 +64,6 @@ class Star(Resource):
         self.reqparse.add_argument('name', type=str, location='json')
         self.reqparse.add_argument('distance', type=int, location='json')
         super(Star, self).__init__()
-
-    def get(self):
-        stars = mongo.db.stars.find()
-        return {'result': [marshal(star, star_fields) for star in stars]}
 
     def post(self):
         stars = mongo.db.stars
@@ -67,12 +76,16 @@ class Star(Resource):
         return {'result': marshal(star, star_fields)}, 201
 
     # add method for returning a single record
+    def get(self, name):
+        star = [star for star in mongo.db.stars.find() if star['name'] == name]
+        return {'star': marshal(star[0], star_fields)}, 201
 
     # add emthod for deleting a record
 
 
 api = Api(app)
-api.add_resource(Star, '/api/v1.0', endpoint='star')
+api.add_resource(Stars, '/api/v1/stars', endpoint='stars')
+api.add_resource(Star, '/api/v1/star/<string:name>', endpoint='star')
 
 
 if __name__ == '__main__':
