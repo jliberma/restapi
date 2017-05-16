@@ -66,8 +66,13 @@ curl -i http://localhost:5000/star
 curl -i http://localhost:5000/star/test4
 ~~~~
 
-combine mongodb and pythin flask-restful
+Combine mongodb and python flask-restful
 ~~~~
+# start mongodb
+mongod --dbpath /data/db &
+# start API endpoint listeners
+python mongo_new.py &
+ps -ef | grep mongo
 # view all stars
 curl -u jacob:password -i http://localhost:5000/api/v1/stars
 # post a star
