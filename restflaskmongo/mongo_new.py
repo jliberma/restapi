@@ -1,16 +1,9 @@
 #!/usr/bin/env python
 
-from flask import Flask
-from flask import jsonify
-from flask import abort
-from flask import make_response
-from flask_pymongo import PyMongo
-from flask_restful import Api
-from flask_restful import Resource
-from flask_restful import reqparse
-from flask_restful import fields
-from flask_restful import marshal
+from flask import Flask, jsonify, abort, make_response
 from flask_httpauth import HTTPBasicAuth
+from flask_pymongo import PyMongo
+from flask_restful import Api, Resource, reqparse, fields, marshal
 
 
 app = Flask(__name__)
