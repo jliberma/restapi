@@ -80,7 +80,7 @@ class TaskListAPI(Resource):
 
 
 class TaskAPI(Resource):
-    descorators = [auth.login_required]
+    decorators = [auth.login_required]
 
     def __init__(self):
         self.reqparse = reqparse.RequestParser()
@@ -89,7 +89,7 @@ class TaskAPI(Resource):
         self.reqparse.add_argument('done', type=bool, location='json')
         super(TaskAPI, self).__init__()
 
-    def get(Self, id):
+    def get(self, id):
         task = [task for task in tasks if task['id'] == id]
         if len(task) == 0:
             abort(404)
