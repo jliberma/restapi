@@ -1,0 +1,7 @@
+
+~~~~
+conda install csvkit
+csvcut -n ws72014_possession_stats.csv
+csvjson ws72014_possession_stats.csv > data.json
+python -m json.tool data.json
+~~~~

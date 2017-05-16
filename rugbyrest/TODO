@@ -1,0 +1,6 @@
+0. convert rugby csv to json
+1. Set up MongoDB for rugby
+2. Import csv records in MongoDB
+3. Write API to get, put, update records
+4. Add auth
+5. find a place to host
