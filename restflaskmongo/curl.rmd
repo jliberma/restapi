@@ -68,9 +68,16 @@ curl -i http://localhost:5000/star/test4
 
 combine mongodb and pythin flask-restful
 ~~~~
+# view all stars
 curl -u jacob:password -i http://localhost:5000/api/v1/stars
+# post a star
 curl -u jacob:password -i -H "Content-Type: application/json" -X POST -d " { \"name\" : \"test9\", \"distance\" : \"900\"} " http://localhost:5000/api/v1.0/star
+# view the new star
 curl -u jacob:password -i http://localhost:5000/api/v1/star/test9
+# delete the star
 curl -u jacob:password -i -H "Content-Type: application/json" -X DELETE http://localhost:5000/api/v1/star/test9
+# verify delete
 curl -u jacob:password -i http://localhost:5000/api/v1/stars
+# test 404 error on failed delete
+curl -u jacob:password -i -H "Content-Type: application/json" -X DELETE http://localhost:5000/api/v1/star/test9
 ~~~~
