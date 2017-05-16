@@ -84,9 +84,8 @@ class Star(Resource):
         star = [star for star in stars.find() if star['name'] == name]
         if len(star) == 0:
             abort(404)
-        stars.delete_many({ "name": name } )
+        stars.delete_many({"name": name})
         return {'remove': marshal(star, star_fields)}, 201
-
 
 
 api = Api(app)
